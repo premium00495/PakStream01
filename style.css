@@ -1,0 +1,99 @@
+/* General body styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f4f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Card container for login/admin pages */
+.card {
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    text-align: center;
+    width: 350px;
+}
+
+/* Input fields */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #0070f3;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 8px;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+/* Messages for errors/alerts */
+.msg {
+    color: #c00;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Admin panel specific */
+h2, h3 {
+    margin-bottom: 15px;
+    color: #111;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+/* Logout / Links styling */
+a {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 20px;
+    background: #f44336;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+a:hover {
+    background: #c62828;
+}
+
+/* Textarea in admin panel */
+textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    resize: vertical;
+}
+
+/* Responsive adjustments */
+@media (max-width: 400px){
+    .card { width: 90%; padding: 20px; }
+}
