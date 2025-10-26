@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Login</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="card">
+  <h2>Admin Login</h2>
+  <input type="text" id="adminKey" placeholder="Enter Admin Key">
+  <button id="loginBtn">Login</button>
+  <p id="msg"></p>
+</div>
+<script>
+document.getElementById('loginBtn').addEventListener('click', async ()=>{
+  const key = document.getElementById('adminKey').value.trim();
+  const msg = document.getElementById('msg');
+  msg.textContent = '';
+  if(!key){ msg.textContent='Enter Admin Key'; return; }
+
+  const res = await fetch('/api/adminAuth',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({key})});
+  const data = await res.json();
+  if(data.valid) window.location.href='/admin.html';
+  else msg.textContent='Invalid Admin Key';
+});
+</script>
+</body>
+</html>
