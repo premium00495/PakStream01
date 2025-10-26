@@ -1,9 +1,0 @@
-{
-  "rewrites":[
-    {"source":"/dashboard","destination":"/api/dashboard"}
-  ],
-  "redirects":[
-    {"source":"/watch.html","destination":"/dashboard","permanent":false},
-    {"source":"/index.html","destination":"/","permanent":false}
-  ]
-}
